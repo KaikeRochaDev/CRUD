@@ -42,7 +42,7 @@ export const updateUser = (req, res) => {
         req.body.data_nascimento,
     ]
 
-    db.query(q, [...values, res.params.id], (err) => {
+    db.query(q, [...values, req.params.id], (err) => {
         if(err){
             return res.json(err)
         }
